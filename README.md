@@ -57,13 +57,13 @@ fallbackValue(user, "profile.address.typo", "Unknown");  // ❌ TypeScript error
 ## Installation
 
 ```bash
-npm install @pico-brief/fallbackValue
+npm install @pico-brief/fallback_value
 ```
 
 Then import it:
 
 ```typescript
-import fallbackValue from "@pico-brief/fallbackValue";
+import fallbackValue from "@pico-brief/fallback_value";
 ```
 
 ---
