@@ -1,0 +1,39 @@
+{
+    "name": "@pico-brief/fallback_value",
+    "version": "1.0.0",
+    "description": "A safe, fully typed utility for reading deeply nested values from objects",
+    "type": "module",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "test": "node --experimental-strip-types --test test/*.test.ts",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "typescript",
+        "utility",
+        "deep",
+        "nested",
+        "path",
+        "fallback",
+        "safe"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0"
+    }
+}

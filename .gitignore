@@ -1,0 +1,12 @@
+node_modules/
+dist/
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
