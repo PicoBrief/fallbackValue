@@ -136,8 +136,8 @@ export default function fallbackValue(
 export default function fallbackValue<T>(
     val: T,
     path?: null,
-    defaultVal?: T | null
-): T | null;
+    defaultVal?: T
+): T | undefined;
 
 /**
  * Overload 3: Path provided — safely traverses the object and returns the
@@ -146,16 +146,16 @@ export default function fallbackValue<T>(
 export default function fallbackValue<T extends object, P extends DotPath<T>>(
     val: T,
     path: P,
-    defaultVal?: PathValue<T, P> | null
-): PathValue<T, P> | null;
+    defaultVal?: PathValue<T, P>
+): PathValue<T, P> | undefined;
 
 // ─── Implementation ───────────────────────────────────────────────────────────
 
 export default function fallbackValue<T extends object>(
     val: any,
     path?: string | null,
-    defaultVal: any = null
-): T | null {
+    defaultVal: any = undefined
+): T | undefined {
     if (path != null) {
         const segments = tokenize(path);
         let current: any = val;

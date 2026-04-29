@@ -78,7 +78,7 @@ fallbackValue(object, path, defaultValue)
 |----------------|---------------------------------------------------------|
 | `object`       | The object you want to read from                        |
 | `path`         | A string describing where to look (see Path Syntax)     |
-| `defaultValue` | What to return if the path leads nowhere (default: `null`) |
+| `defaultValue` | What to return if the path leads nowhere (default: `undefined`) |
 
 ---
 

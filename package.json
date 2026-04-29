@@ -1,6 +1,6 @@
 {
     "name": "@pico-brief/fallback_value",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A safe, fully typed utility for reading deeply nested values from objects",
     "type": "module",
     "main": "dist/index.cjs",

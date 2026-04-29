@@ -20,9 +20,9 @@ describe("no path", () => {
         assert.equal(fallbackValue(undefined, null, "default"), "default");
     });
 
-    test("defaults to null when no defaultVal is provided", () => {
-        assert.equal(fallbackValue(null), null);
-        assert.equal(fallbackValue(undefined), null);
+    test("defaults to undefined when no defaultVal is provided", () => {
+        assert.equal(fallbackValue(null), undefined);
+        assert.equal(fallbackValue(undefined), undefined);
     });
 });
 
@@ -45,8 +45,8 @@ describe("dot notation", () => {
         assert.equal(fallbackValue({ a: {} } as any, "a.b.c", "nope"), "nope");
     });
 
-    test("returns null by default when the path leads nowhere", () => {
-        assert.equal(fallbackValue({ a: 1 } as any, "b"), null);
+    test("returns undefined by default when the path leads nowhere", () => {
+        assert.equal(fallbackValue({ a: 1 } as any, "b"), undefined);
     });
 });
 
@@ -137,9 +137,9 @@ describe("stored undefined", () => {
         assert.equal(fallbackValue(obj, "score", 0), 0);
     });
 
-    test("returns null (not undefined) when stored undefined has no defaultVal", () => {
+    test("returns undefined when stored undefined has no defaultVal", () => {
         const obj = { score: undefined } as any;
-        assert.equal(fallbackValue(obj, "score"), null);
+        assert.equal(fallbackValue(obj, "score"), undefined);
     });
 
     test("returns stored null as-is (null is not treated as missing)", () => {
